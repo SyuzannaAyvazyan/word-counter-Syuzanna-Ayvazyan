@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const letterCount = text.replace(/\s/g, "").length;
         const totalLength = text.length;
         const wordCount = text.trim().length > 0 ? text.trim().split(/\s+/).length : 0;
-        const sentenceCount = text.split(/[.!?]+/).filter(Boolean).length;
+        const sentenceCount = text
+        .replace(/\s+/g, " ")
+        .trim()
+        .split(/(?<=[.!?])\s+(?=[A-Za-z])/)
+        .filter(Boolean).length;
 
         outputField.innerHTML = `
             <h3><strong>Total Length:</strong> ${totalLength} characters (including spaces)</h3>
