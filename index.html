@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>Word Counters</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Count the Letters, Words and Sentences!</h1>
+
+        <div class="input-container">
+            <textarea name="" id="inputField" class="input-box" placeholder="Write something..."></textarea>
+            <button id="downloadButton">Download as PDF</button>
+            <button id="changeColorButton">Change the color</button>
+        </div>
+        <div id="outputField" class="output-box"></div>
+    </div>
+
+    <script src="wordcounter.js"></script>
+</body>
+</html>
